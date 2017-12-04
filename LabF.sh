@@ -2,7 +2,7 @@
 
 #Part 2
 wget http://factorized.net/crusoe.txt
-find /tmp -name '*.txt'
+find /tmp -maxdepth 1 -type f -name '*.txt'
 grep 'Friday' crusoe.txt
 echo "Hello world" > text.txt
 ls > list.txt
@@ -15,11 +15,9 @@ sed -i 's/Friday/Hello world/g' crusoe.txt
 awk 'BEGIN {
  s1 = 0
  s2 = 0
-}
-{
+} {
  s1 = s1 + $1
  s2 = s2 + $2
-}
-END {
+} END {
  print s1, s2
 }' test.txt
