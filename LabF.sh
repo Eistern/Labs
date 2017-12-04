@@ -2,7 +2,7 @@
 
 #Part 2
 wget http://factorized.net/crusoe.txt
-find /tmp -maxdepth 1 -type f -name '*.txt'
+find /tmp ! -readable -prune -o -name '*.txt' -print
 grep 'Friday' crusoe.txt
 echo "Hello world" > text.txt
 ls > list.txt
