@@ -12,7 +12,7 @@ gcc hello.c
 cd ../
 Labs/a.out
 cd Labs
-export PATH=$PATH:pwd
+export PATH=$PATH:/home/students/17200/zulin/Labs
 
 #Part 3
 cd ../
