@@ -4,9 +4,9 @@
 
 wget http://factorized.net/crusoe.txt
 egrep ' [zZ]' ./crusoe.txt
-egrep '[a-zA-Z]{16,16} ' ./crusoe.txt
+egrep -w '[a-zA-Z]{16}' ./crusoe.txt
 egrep -w '[aA][a-z]{1,}[c]' ./crusoe.txt
-egrep ' [aA][bB]' ./crusoe.txt | egrep -v ' [Aa][bB][oO]' 
+egrep -w '[aA][bB][^oO]' ./crusoe.txt 
 rm crusoe.txt
 
 wget http://factorized.net/patterns.txt
