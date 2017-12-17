@@ -3,14 +3,15 @@
 #Part 2
 wget http://factorized.net/crusoe.txt
 find /tmp ! -readable -prune -o -name '*.txt' -print
-grep 'Friday' crusoe.txt
+grep -i -c 'Friday' crusoe.txt
 echo "Hello world" > text.txt
 ls > list.txt
 find . -name '*.txt'
 
 #Part 3
-grep 'Friday' crusoe.txt | wc -l
+grep -i -o 'Friday' crusoe.txt | wc -l
 sed -i 's/Friday/Hello world/g' crusoe.txt
+rm crusoe.txt text.txt list.txt
 
 awk 'BEGIN {
  s1 = 0
